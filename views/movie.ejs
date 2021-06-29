@@ -1,0 +1,31 @@
+    <!DOCTYPE>
+    <html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+        <script>
+            document.getElementsByTagName('body')[0].style.background = "rgb(224,224,224)";
+        </script>
+        <br>
+        <center>
+            <h1 class="font-weight-light">Searches For : <%=shows[0].show.name%></h1>
+            <div class="row" style="margin:4em 6em 4em 6em;">
+                
+                <% for (let result of shows) { %>
+                    <% if(result.show.image) { %>
+                        <div class=" col-sm-3" style="padding:1em 0em 1em 0em"><a href="/img/<%= result.show.id %>"><img
+                                    src="<%= result.show.image.medium %>" class="rounded" width="90%"></a></div>
+                        <% } %>
+                            <%} %>
+            </div>
+        </center>
+    </body>
+
+    </html>
