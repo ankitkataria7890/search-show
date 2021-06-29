@@ -28,8 +28,13 @@ app.post("/search", (req, res) => {
     const api = fetch('http://api.tvmaze.com/search/shows?q=' + query).then(res =>
         res.json()
     ).then(data => {
+        if(data[0])
         res.render('movie', { shows: data })
-    })
+        else res.send('<script> alert("Sorry! Nothing Found With Your Keywords Please Try With Other Keywords Such as Avengers ,Tim ,Girls..");window.location.href="/" ;</script> ');
+    }).catch((err)=>{
+        res.send('<script> alert("Please Check Internet Connection . Problem In Fetching Data");window.location.href="/" ;</script> ');
+        console.log("error")
+     })
 })
 app.get('/movie', (req, res) => {
     res.redirect('movie')
