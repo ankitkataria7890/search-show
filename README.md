@@ -1,4 +1,4 @@
-# tvshows
+# search-show
 https://searchshow.herokuapp.com/
 Present you a simple search interface 
 where you can search keywords related to Tv shows 
