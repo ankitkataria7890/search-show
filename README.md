@@ -1,6 +1,6 @@
 # tvshows
 Present you a simple search interface 
-where you can search keywords realted to Tv shows 
+where you can search keywords related to Tv shows 
 And get know about its genre , langauge ,official site , rating ,and summary about show.
 In this project I used Nodejs and Express as backend/server and bootstrap , html ,css 
 for frontend . 
